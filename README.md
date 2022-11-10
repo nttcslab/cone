@@ -12,7 +12,7 @@ Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Com
   title     = {Deep Quantigraphic Image Enhancement via Comparametric Equations},
   booktitle = {IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
   pages     = {xxxx--xxxx},
-  year      = {2023},
+  year      = {2023}
 }
 ```
 
@@ -22,10 +22,10 @@ Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Com
 
 - Python 3.7
 - PyTorch 1.8.0
-- scikit-image (only for PSNR and SSIM computations)
+- scikit-image
 - mmcv 1.6.0 (only for computing parameter counts and flops)
 
-For example, the following commands create an execution environment named "cone" for this PyTorch implementation.
+For example, the following commands create an execution environment named `cone` for this PyTorch implementation.
 
 ```
 conda create --name cone python=3.7
@@ -39,4 +39,13 @@ pip install mmcv==1.6.0 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1
 
 Download the `mit` and `lsrw` folders (about 900M total) from [here](https://github.com/xiaomengwupx/cone-data) and store them in the `data` folder. These two benchmark datasets have been reorganized by [Ma et al](https://github.com/vis-opt-group/SCI). In this reorganized configuration, both datasets contain 500 training images. The number of test images is 100 and 50, respectively.
 
+## Testing
+
+The following command reproduces the results reported in our paper.
+
+```
+python test.py
+```
+
+We provide three pre-trained models trained on different datasets with different comparametric equations. They are located under the `exp` folder.
 
