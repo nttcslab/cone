@@ -47,5 +47,5 @@ The following command reproduces the results reported in our paper.
 python test.py
 ```
 
-We provide three pre-trained models trained on different datasets with different comparametric equations. They are located under the `exp` folder.
+We provide three models pre-trained with different comparametric equations on different datasets. They are located under the `exp` folder.
 
