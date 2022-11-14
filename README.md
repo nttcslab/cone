@@ -27,7 +27,7 @@ Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Com
 
 For example, the following commands create an execution environment named `cone` for this PyTorch implementation.
 
-```
+```bash
 conda create --name cone python=3.7
 conda activate cone
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
@@ -56,7 +56,7 @@ The data for testing and evaluation are located in the following folders.
 
 The following command reproduces the results reported in our paper.
 
-```
+```bash
 python test.py
 ```
 
