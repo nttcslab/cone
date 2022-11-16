@@ -60,5 +60,13 @@ The following command reproduces the results reported in our paper.
 python test.py
 ```
 
-We provide three models pre-trained with different comparametric equations on different datasets. They are located under the `exp` folder.
+We provide three models pre-trained on different datasets with different comparametric equations. They are located under the `exp` folder. See the table below for details.
+
+| Model | Dataset | CEM |
+| :--- | :---: | :---: |
+| `train-20221108-052232` | MIT | Sigmoid Correction |
+| `train-20221108-053222` | LSRW | BetaGamma Correction |
+| `train-20221110-055039` | LSRW | Preferred Correction |
+
+By default, `test.py` evaluates the performance of the first model. If, for example, you want to test the second model, you need to change the value of the argument `dataset` to `lsrw` and the value of `model` to `train-20221108-053222`. These values are specified in the next two lines.
 
