@@ -77,3 +77,31 @@ parser.add_argument('--model', type=str, default='train-20221108-052232', help='
 
 ## Training
 
+
+
+
+
+
+
+
+
+
+
+## Flops Counter
+
+
+
+
+
+
+
+
+
+
+
+## Licence
+
+See [`LICENSE.md`](https://github.com/nttcslab/cone/blob/master/README.md) for details.
+
+## Acknowledgements
+
