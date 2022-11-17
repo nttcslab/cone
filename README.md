@@ -105,3 +105,4 @@ See [`LICENSE.md`](https://github.com/nttcslab/cone/blob/master/LICENSE.md) for 
 
 ## Acknowledgements
 
+This implementation is built based on [SCI](https://github.com/vis-opt-group/SCI) provided by Ma et al. Thanks to them for their great work!
