@@ -99,7 +99,7 @@ parser.add_argument('--model', type=str, default='train-20221108-052232', help='
 
 
 
-## Licence
+## License
 
 See [`LICENSE.md`](https://github.com/nttcslab/cone/blob/master/LICENSE.md) for details.
 
