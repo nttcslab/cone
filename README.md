@@ -68,5 +68,12 @@ We provide three models pre-trained on different datasets with different compara
 | `train-20221108-053222` | LSRW | BetaGamma Correction |
 | `train-20221110-055039` | LSRW | Preferred Correction |
 
-By default, `test.py` evaluates the performance of the first model. If, for example, you want to test the second model, you need to change the value of the argument `dataset` to `lsrw` and the value of `model` to `train-20221108-053222`. These values are specified in the next two lines.
+By default, `test.py` evaluates the performance of the first model. For example, to test the second model, you need to change the value of the argument `dataset` to `lsrw` and `model` to `train-20221108-053222`. Check the next two lines in `test.py` for details.
+
+```python
+parser.add_argument('--dataset', type=str, default='mit', help='dataset') # 'mit' or 'lsrw'
+parser.add_argument('--model', type=str, default='train-20221108-052232', help='target model')
+```
+
+## Training
 
