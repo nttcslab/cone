@@ -10,7 +10,8 @@ Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Com
                Yongqing Sun and
                Akisato Kimura},
   title     = {Deep Quantigraphic Image Enhancement via Comparametric Equations},
-  booktitle = {IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+  booktitle = {IEEE International Conference on Acoustics, Speech, and Signal Processing
+               (ICASSP)},
   pages     = {xxxx--xxxx},
   year      = {2023}
 }
