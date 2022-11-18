@@ -40,7 +40,7 @@ pip install mmcv==1.6.0
 
 Download the `mit` and `lsrw` folders (about 900M total) from [here](https://github.com/xiaomengwupx/cone-data) and store them in the `data` folder. These two benchmark datasets have been reorganized by [Ma et al](https://github.com/vis-opt-group/SCI). In this reorganized configuration, both datasets contain 500 training images. The number of test images is 100 and 50, respectively.
 
-As an example, for the MIT dataset, the training data is located in the following folder. Note that the ground-truth images in the `gt` folder are not used.
+As an example, for the MIT dataset, the training data is located in the following folder. (Note that the ground-truth images in the `gt` folder are not used.)
 
 ```
 ./data/mit/train/input
@@ -78,12 +78,32 @@ parser.add_argument('--model', type=str, default='train-20221108-052232', help='
 
 ## Training
 
+The following command trains the model from scratch.
 
+```bash
+python train.py
+```
 
+The same model as `train-20221108-052232` should result from the training. You can change the value of the argument `dataset` to `lsrw` by modifying the following line in `train.py`.
 
+```python
+parser.add_argument('--dataset', type=str, default='mit', help='dataset') # 'mit' or 'lsrw'
+```
 
+You can also try other comparametric equations by changing the argument `cem`.
 
+```python
+parser.add_argument('--cem', type=str, default='sigmoid', help='cem')
+```
 
+The value of the argument 'cem' should be chosen from the following options:
+
+| Value | CEM |
+| :--- | :---: |
+| `baseline` | Baseline (w/o CEM) |
+| `betagamma` | BetaGamma Correction |
+| `preferred` | Preferred Correction |
+| `sigmoid` | Sigmoid Correction |
 
 
 
