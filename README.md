@@ -107,7 +107,7 @@ The value of the argument 'cem' should be chosen from the following options:
 
 `train.py` creates a unique folder whose name begins with `train-`. This folder will contain all the files related to the current training. The contents of this working folder will look like the following.
 
-```python
+```
 ├── models # models obtained after each epoch
 │   ├── model_001.pt
 │   ├── model_002.pt
