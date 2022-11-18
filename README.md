@@ -105,7 +105,28 @@ The value of the argument 'cem' should be chosen from the following options:
 | `preferred` | Preferred Correction |
 | `sigmoid` | Sigmoid Correction |
 
+`train.py` creates a unique folder whose name begins with `train-`. This folder will contain all the files related to the current training. The contents of this working folder will look like the following.
 
+```python
+├── models # models obtained after each epoch
+│   ├── model_001.pt
+│   ├── model_002.pt
+│   ├── ...
+│   └── model_500.pt
+├── results # test images enhanced by "model_500.pt" (created by "test.py")
+│   ├── 0008.png
+│   ├── ...
+│   └── 0518.png
+├── scripts # all scripts at the time of running "train.py"
+│   ├── flop.py
+│   ├── loss.py
+│   ├── model.py
+│   ├── test.py
+│   ├── train.py
+│   └── utils.py
+├── test.log # performance on test images per 10 epochs
+└── train.log # training log
+```
 
 
 ## Flops Counter
