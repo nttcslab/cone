@@ -24,7 +24,7 @@ Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Com
 - Python 3.7
 - PyTorch 1.8.0
 - scikit-image
-- mmcv 1.6.0 (only for computing parameter counts and flops)
+- mmcv 1.6.0 (should be lower than 2.0)
 
 For example, the following commands create an execution environment named `cone` for this PyTorch implementation.
 
@@ -84,7 +84,9 @@ The following command trains the model from scratch.
 python train.py
 ```
 
-The same model as `train-20221108-052232` should result from the training. You can change the value of the argument `dataset` to `lsrw` by modifying the following line in `train.py`.
+The same model as `train-20221108-052232` should result from the training. Note that completely reproducible results are not guaranteed by PyTorch, even when using identical seeds. Therefore, the performance of your own trained model may differ slightly from that in our paper. Also, results may differ to some extent between CPU and GPU executions.
+
+You can change the value of the argument `dataset` to `lsrw` by modifying the following line in `train.py`.
 
 ```python
 parser.add_argument('--dataset', type=str, default='mit', help='dataset') # 'mit' or 'lsrw'
@@ -96,7 +98,7 @@ You can also try other comparametric equations by changing the argument `cem`.
 parser.add_argument('--cem', type=str, default='sigmoid', help='cem')
 ```
 
-The value of the argument 'cem' should be chosen from the following options:
+The value of the argument `cem` should be chosen from the following options:
 
 | Value | CEM |
 | :--- | :---: |
@@ -107,7 +109,7 @@ The value of the argument 'cem' should be chosen from the following options:
 
 `train.py` creates a unique folder whose name begins with `train-`. This folder will contain all the files related to the current training. The contents of this working folder will look like the following.
 
-```
+```python
 ├── models # models obtained after each epoch
 │   ├── model_001.pt
 │   ├── model_002.pt
@@ -128,18 +130,15 @@ The value of the argument 'cem' should be chosen from the following options:
 └── train.log # training log
 ```
 
-
 ## Flops Counter
 
+The following command reproduces parameter counts and flops reported in our paper.
 
+```bash
+python flop.py
+```
 
-
-
-
-
-
-
-
+This is the only code that requires the `mmcv` library. There is no need to install `mmcv` unless you need to reproduce the complexity information.
 
 ## License
 
