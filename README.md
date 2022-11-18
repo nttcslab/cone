@@ -63,7 +63,7 @@ python test.py
 
 We provide three models pre-trained on different datasets with different comparametric equations. They are located under the `exp` folder. See the table below for details.
 
-| Model | Dataset | CEM |
+| Model | Dataset | Comparametric Equation |
 | :--- | :---: | :---: |
 | `train-20221108-052232` | MIT | Sigmoid Correction |
 | `train-20221108-053222` | LSRW | BetaGamma Correction |
@@ -110,16 +110,17 @@ The value of the argument `cem` should be chosen from the following options:
 `train.py` creates a unique folder whose name begins with `train-`. This folder will contain all the files related to the current training. The contents of this working folder will look like the following.
 
 ```python
+├── cem.txt # value of argument 'cem'
 ├── models # models obtained after each epoch
 │   ├── model_001.pt
 │   ├── model_002.pt
 │   ├── ...
 │   └── model_500.pt
-├── results # test images enhanced by "model_500.pt" (created by "test.py")
+├── results # test images enhanced by 'model_500.pt' (created by 'test.py')
 │   ├── 0008.png
 │   ├── ...
 │   └── 0518.png
-├── scripts # all scripts at the time of running "train.py"
+├── scripts # all scripts at the time of running 'train.py'
 │   ├── flop.py
 │   ├── loss.py
 │   ├── model.py
