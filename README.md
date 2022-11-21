@@ -110,25 +110,25 @@ The value of the argument `cem` should be chosen from the following options:
 `train.py` creates a unique folder whose name begins with `train-`. This folder will contain all the files related to the current training. The contents of this working folder will look like the following.
 
 ```python
-├── cem.txt # value of argument 'cem'
-├── models # models obtained after each epoch
+├── cem.txt # storing value of argument 'cem'
+├── models # storing models obtained after each epoch
 │   ├── model_001.pt
 │   ├── model_002.pt
 │   ├── ...
 │   └── model_500.pt
-├── results # test images enhanced by 'model_500.pt' (created by 'test.py')
+├── results # storing test images enhanced by 'model_500.pt' (created by 'test.py')
 │   ├── 0008.png
 │   ├── ...
 │   └── 0518.png
-├── scripts # all scripts at the time of running 'train.py'
+├── scripts # storing all the scripts at the time of running 'train.py'
 │   ├── flop.py
 │   ├── loss.py
 │   ├── model.py
 │   ├── test.py
 │   ├── train.py
 │   └── utils.py
-├── test.log # performance on test images per 10 epochs
-└── train.log # training log
+├── test.log # storing performance on test images per 10 epochs
+└── train.log # storing messages output during training
 ```
 
 ## Flops Counter
@@ -147,4 +147,4 @@ See `LICENSE.md` for details.
 
 ## Acknowledgements
 
-This implementation is built based on [SCI](https://github.com/vis-opt-group/SCI) provided by Ma et al. Thanks to them for their great work!
+This implementation is built with reference to [SCI](https://github.com/vis-opt-group/SCI) provided by Ma et al. Thanks to them for their great work!
