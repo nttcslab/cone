@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/python-3.7-blue.svg)
 
-Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Comparametric Equations]() (ICASSP2023)
+Official PyTorch Implementation of [Deep Quantigraphic Image Enhancement via Comparametric Equations](https://arxiv.org/abs/2304.02285) (ICASSP2023)
 
 ```BibTeX
 @inproceedings{cone,
